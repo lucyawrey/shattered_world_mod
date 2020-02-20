@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "shattered_world_mod",
+  "version": "${version}",
+
+  "name": "Minecraft: Shattered World",
+  "description": "A faithful gameplay overhaul mod.",
+  "authors": [
+    "Lucy Awrey"
+  ],
+  "contact": {
+    "homepage": "https://lucyawrey.com/shattered_world",
+    "sources": "https://github.com/lucyawrey/shattered_world_mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/shattered_world_mod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.lucyawrey.shattered_world_mod.ShatteredWorldMod"
+    ]
+  },
+  "mixins": [
+    "shattered_world_mod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.2",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
