@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "shattered_world",
-  "version": "${version}",
+  "version": "0.0.1",
 
-  "name": "Minecraft: Shattered World",
+  "name": "Shattered World",
   "description": "A faithful gameplay overhaul mod.",
   "authors": [
     "Lucy Awrey"
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.lucyawrey.shattered_world.ShatteredWorldMod"
+      "net.lucyawrey.shattered_world.ShatteredWorld"
     ]
   },
   "mixins": [
