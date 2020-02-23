@@ -1,4 +1,4 @@
-package net.lucyawrey.shattered_world_mod.mixin;
+package net.lucyawrey.shattered_world.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

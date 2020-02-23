@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "shattered_world_mod",
+  "id": "shattered_world",
   "version": "${version}",
 
   "name": "Minecraft: Shattered World",
@@ -14,16 +14,16 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/shattered_world_mod/icon.png",
+  "icon": "assets/shattered_world/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.lucyawrey.shattered_world_mod.ShatteredWorldMod"
+      "net.lucyawrey.shattered_world.ShatteredWorldMod"
     ]
   },
   "mixins": [
-    "shattered_world_mod.mixins.json"
+    "shattered_world.mixins.json"
   ],
 
   "depends": {
