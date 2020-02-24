@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "minecraft:copper_ore"
+    "item": "shattered_world:copper_ore"
   },
-  "result": "minecraft:copper_ingot",
+  "result": "shattered_world:copper_ingot",
   "experience": 0.6,
   "cookingtime": 100
 }

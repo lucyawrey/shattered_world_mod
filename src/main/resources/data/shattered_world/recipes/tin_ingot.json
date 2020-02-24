@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "minecraft:tin_ore"
+    "item": "shattered_world:tin_ore"
   },
-  "result": "minecraft:tin_ingot",
+  "result": "shattered_world:tin_ingot",
   "experience": 0.6,
   "cookingtime": 200
 }
