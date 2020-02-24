@@ -10,7 +10,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class ShatteredWorldContent {
+public class SwContent {
 
 	// Blocks
 	public static final Block COPPER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3, 15).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).build());
