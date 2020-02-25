@@ -1,47 +1,39 @@
 package net.lucyawrey.shattered_world;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tools.FabricToolTags;
+import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.decorator.Decorator;
+import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class SwWorld {
 
-	public static void init() {
-		//Loop over existing biomes
-		Registry.BIOME.forEach(SwWorld.handleBiomeOres);
+	public void init() {
+		// Loop over existing biomes
+		Registry.BIOME.forEach(this::handleOres);
 
-		//Listen for other biomes being registered	
-		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> handleBiomeOres(biome));
+		// Listen for other biomes being registered
+		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> handleOres(biome));
 	}
 
-	public static void handleBiomeOres(Biome biome) {
-		if(biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
-			biome.addFeature(
-								GenerationStep.Feature.UNDERGROUND_ORES,
-								Biome.configureFeature(
-										Feature.ORE,
-							new OreFeatureConfig(
-								OreFeatureConfig.Target.NATURAL_STONE,
-								Blocks.NETHER_QUARTZ_ORE.getDefaultState(),
-											8 //Ore vein size
-				
-							),
-										Decorator.COUNT_RANGE,
-				
-							new RangeDecoratorConfig(
-								8, //Number of veins per chunk
-				
-								0, //Bottom Offset
-								0, //Min y level
-				
-								64 //Max y level
-							)));
+	private void handleOres(Biome biome) {
+		if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
+			addBasicOre(biome, SwContent.COPPER_ORE, 12, 18, 128);
+			addBasicOre(biome, SwContent.TIN_ORE, 9, 16, 128);
+			addBasicOre(biome, SwContent.SILVER_ORE, 9, 6, 64);
+			addBasicOre(biome, SwContent.QUARTZ_ORE, 7, 4, 16);
 		}
+	}
+
+	private void addBasicOre(Biome biome, Block ore, int veinSize, int veinQuantity, int maxHeight) {
+		biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES,
+				Feature.ORE
+						.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, ore.getDefaultState(), veinSize))
+						.createDecoratedFeature(
+								Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(veinQuantity, 0, 0, maxHeight))));
 	}
 }

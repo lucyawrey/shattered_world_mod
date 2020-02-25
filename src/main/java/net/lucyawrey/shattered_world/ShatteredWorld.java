@@ -6,7 +6,9 @@ public class ShatteredWorld implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		SwContent.init();
-		SwWorld.init();
+		SwContent content = new SwContent();
+		content.init();
+		SwWorld world = new SwWorld();
+		world.init();
 	}
 }
