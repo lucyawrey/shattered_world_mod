@@ -13,10 +13,9 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 public class SwWorld {
 
 	public void init() {
-		// Loop over existing biomes
+		// Loop over existing biomes and add ores to each
 		Registry.BIOME.forEach(this::handleOres);
-
-		// Listen for other biomes being registered
+		// Listen for other biomes being registered by mods and add ores to each
 		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> handleOres(biome));
 	}
 
@@ -27,7 +26,7 @@ public class SwWorld {
 			addBasicOre(biome, SwContent.SILVER_ORE, 9, 6, 64);
 			addBasicOre(biome, SwContent.QUARTZ_ORE, 7, 4, 16);
 		} else if (biome.getCategory() == Biome.Category.NETHER) {
-			// TODO
+			// Add nether ores
 		}
 	}
 
