@@ -26,6 +26,8 @@ public class SwWorld {
 			addBasicOre(biome, SwContent.TIN_ORE, 9, 16, 128);
 			addBasicOre(biome, SwContent.SILVER_ORE, 9, 6, 64);
 			addBasicOre(biome, SwContent.QUARTZ_ORE, 7, 4, 16);
+		} else if (biome.getCategory() == Biome.Category.NETHER) {
+			// TODO
 		}
 	}
 
@@ -33,6 +35,13 @@ public class SwWorld {
 		biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES,
 				Feature.ORE
 						.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, ore.getDefaultState(), veinSize))
+						.createDecoratedFeature(
+								Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(veinQuantity, 0, 0, maxHeight))));
+	}
+
+	private void addNetherOre(Biome biome, Block ore, int veinSize, int veinQuantity, int maxHeight) {
+		biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES,
+				Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NETHERRACK, ore.getDefaultState(), veinSize))
 						.createDecoratedFeature(
 								Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(veinQuantity, 0, 0, maxHeight))));
 	}

@@ -42,7 +42,6 @@ public class SwContent {
 
 		// Items
 		registerItem("copper_ingot", COPPER_INGOT);
-		registerItem("copper_ingot", COPPER_INGOT);
 		registerItem("tin_ingot", TIN_INGOT);
 		registerItem("silver_ingot", SILVER_INGOT);
 		registerItem("bronze_ingot", BRONZE_INGOT);
