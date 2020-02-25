@@ -26,7 +26,8 @@ public class SwWorld {
 			addBasicOre(biome, SwContent.SILVER_ORE, 9, 6, 64);
 			addBasicOre(biome, SwContent.QUARTZ_ORE, 7, 4, 16);
 		} else if (biome.getCategory() == Biome.Category.NETHER) {
-			// Add nether ores
+			addNetherOre(biome, SwContent.NETHER_SILVER_ORE, 9, 6, 128);
+			addNetherOre(biome, SwContent.NETHER_COAL_ORE, 12, 15, 128);
 		}
 	}
 
