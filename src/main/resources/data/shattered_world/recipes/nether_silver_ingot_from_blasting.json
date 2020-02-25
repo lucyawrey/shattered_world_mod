@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "shattered_world:nether_silver_ore"
+  },
+  "result": "shattered_world:silver_ingot",
+  "experience": 0.9,
+  "cookingtime": 100
+}

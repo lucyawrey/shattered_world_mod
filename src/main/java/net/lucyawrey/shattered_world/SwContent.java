@@ -14,7 +14,6 @@ public class SwContent {
 
 	// Constants
 	public static final String NAMESPACE = "shattered_world";
-
 	// Ore Blocks
 	public static final Block COPPER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3, 15)
 			.breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 1).build());
@@ -23,6 +22,10 @@ public class SwContent {
 	public static final Block SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3, 15)
 			.breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).build());
 	public static final Block QUARTZ_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3, 15)
+			.breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 0).build());
+	public static final Block NETHER_SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3, 15)
+			.breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).build());
+	public static final Block NETHER_COAL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3, 15)
 			.breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 0).build());
 
 	// Material Items
@@ -39,6 +42,8 @@ public class SwContent {
 		registerBlock("tin_ore", TIN_ORE, ItemGroup.BUILDING_BLOCKS);
 		registerBlock("silver_ore", SILVER_ORE, ItemGroup.BUILDING_BLOCKS);
 		registerBlock("quartz_ore", QUARTZ_ORE, ItemGroup.BUILDING_BLOCKS);
+		registerBlock("nether_silver_ore", NETHER_SILVER_ORE, ItemGroup.BUILDING_BLOCKS);
+		registerBlock("nether_coal_ore", NETHER_COAL_ORE, ItemGroup.BUILDING_BLOCKS);
 
 		// Material Items
 		registerItem("copper_ingot", COPPER_INGOT);

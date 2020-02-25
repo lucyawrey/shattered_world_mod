@@ -5,6 +5,8 @@
   "block.shattered_world.tin_ore": "Tin Ore",
   "block.shattered_world.silver_ore": "Silver Ore",
   "block.shattered_world.quartz_ore": "Quartz Ore",
+  "block.shattered_world.nether_silver_ore": "Nether Silver Ore",
+  "block.shattered_world.nether_coal_ore": "Nether Coal Ore",
   
   "item.shattered_world.copper_ingot": "Copper Ingot",
   "item.shattered_world.tin_ingot": "Tin Ingot",

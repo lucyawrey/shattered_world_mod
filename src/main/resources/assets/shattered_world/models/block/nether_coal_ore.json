@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "shattered_world:block/nether_coal_ore"
+  }
+}
