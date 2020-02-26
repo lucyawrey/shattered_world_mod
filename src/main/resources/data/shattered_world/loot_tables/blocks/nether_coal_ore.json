@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:nether_coal_ore"
+              "name": "shattered_world:nether_coal_ore"
             },
             {
               "type": "minecraft:item",

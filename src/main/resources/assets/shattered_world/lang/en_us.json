@@ -7,11 +7,24 @@
   "block.shattered_world.quartz_ore": "Quartz Ore",
   "block.shattered_world.nether_silver_ore": "Nether Silver Ore",
   "block.shattered_world.nether_coal_ore": "Nether Coal Ore",
+
+  "item.shattered_world.copper_block": "Copper Block",
+  "item.shattered_world.tin_block": "Tin Block",
+  "item.shattered_world.silver_block": "Silver Block",
+  "item.shattered_world.bronze_block": "Bronze Block",
+  "item.shattered_world.electrum_block": "Electrum Block",
+  "item.shattered_world.steel_block": "Steel Block",
   
   "item.shattered_world.copper_ingot": "Copper Ingot",
   "item.shattered_world.tin_ingot": "Tin Ingot",
   "item.shattered_world.silver_ingot": "Silver Ingot",
   "item.shattered_world.bronze_ingot": "Bronze Ingot",
   "item.shattered_world.electrum_ingot": "Electrum Ingot",
-  "item.shattered_world.steel_ingot": "Steel Ingot"
+  "item.shattered_world.steel_ingot": "Steel Ingot",
+  "item.shattered_world.copper_nugget": "Copper Nugget",
+  "item.shattered_world.tin_nugget": "Tin Nugget",
+  "item.shattered_world.silver_nugget": "Silver Nugget",
+  "item.shattered_world.bronze_nugget": "Bronze Nugget",
+  "item.shattered_world.electrum_nugget": "Electrum Nugget",
+  "item.shattered_world.steel_nugget": "Steel Nugget"
 }
