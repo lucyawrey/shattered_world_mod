@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shattered_world:steel_ingot"
+    }
+  ],
+  "result": {
+    "item": "shattered_world:steel_nugget",
+    "count": 9
+  }
+}

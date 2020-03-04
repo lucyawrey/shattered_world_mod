@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shattered_world:tin_ingot"
+    }
+  ],
+  "result": {
+    "item": "shattered_world:tin_nugget",
+    "count": 9
+  }
+}
